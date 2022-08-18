@@ -76,13 +76,13 @@
 
 2. 训练内容：SRS、SOR、DUP-Net、IF-Defense三种变体（ConvNet、ONet-Mesh、ONet-Opt）
 
-3. 训练的攻击方式：Add、Add-Cluster、Add-Object、FGM、KNN、Perturb
+3. 训练的攻击方式：Add、Add-Cluster、Add-Object、FGM、KNN、Perturb、（Pointnet++包含Drop-200）
 
 4. 训练生成文件：防御结果（.npz文件）
 
 #### 五、防御测试
 
 1. 命令格式：CUDA_VISIBLE_DEVICES=0 python inference.py --num_points=1024 --mode=normal/target --model={$MODEL} --normalize_pc=True/False --dataset={$DATASET} --data_root=path/to/test_data.npz
-2. 测试内容：SRS、SOR、DUP-Net、IF-Defense三种变体（ConvNet、ONet-Mesh、ONet-Opt）对Add、Add-Cluster、Add-Object、FGM、KNN、Perturb的防御效果即在攻击下的识别准确度
+2. 测试内容：SRS、SOR、DUP-Net、IF-Defense三种变体（ConvNet、ONet-Mesh、ONet-Opt）对Add、Add-Cluster、Add-Object、FGM、KNN、Perturb、（Pointnet++包含Drop-200）的防御效果即在攻击下的识别准确度
 3. 测试使用的预训练模型：conv_opt_mn40
 4. 测试结果：DUP-Net、IF-Defense三种变体都呈现出了较好的效果，但是DUP-Net对某些攻击而言（如FGM）效果仍不理想，而IF-Defense的三种变体对于这一情况有一定的改善。整体来说效果较好的是IF-Defense中的ConvONet变体，对于大部分攻击方式，ConvONet呈现出了与其他两种变体相当甚至更好的效果。
