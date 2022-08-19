@@ -1,0 +1,8 @@
+add filter=lfs diff=lfs merge=lfs -text
+dup_Add-pointnet2-conv.npz filter=lfs diff=lfs merge=lfs -text
+dup_Cluster-pointnet2-conv.npz filter=lfs diff=lfs merge=lfs -text
+dup_Perturb-pointnet2-conv.npz filter=lfs diff=lfs merge=lfs -text
+dup_Drop-pointnet2-conv.npz filter=lfs diff=lfs merge=lfs -text
+dup_fgm-pointnet2-conv.npz filter=lfs diff=lfs merge=lfs -text
+dup_kNN-pointnet2-conv.npz filter=lfs diff=lfs merge=lfs -text
+dup_Object-pointnet2-conv.npz filter=lfs diff=lfs merge=lfs -text
